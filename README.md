@@ -17,9 +17,9 @@ Run the notebooks in any order. Figures are written to `outputs/`.
 
 ## Notebooks
 
-1. `01_degree_distribution.ipynb` — degree distribution comparison between NERSC and other networks.
+1. `01_degree_distribution.ipynb` — degree distribution comparison between provided data and other networks.
 2. `02_rsa_vs_unweighted_ranking.ipynb` — top-100 scientific-role matches in 2025.
-3. `03_program_office_composition.ipynb` — office composition and HEP representation.
+3. `03_program_office_composition.ipynb` — office composition and Office 1 representation.
 4. `04_role_composition.ipynb` — role composition by degree and RSA strength.
 5. `05_network_metric_methods.ipynb` — compact demonstration of the preliminary table metrics.
 
