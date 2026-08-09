@@ -8,46 +8,45 @@ from scipy.optimize import least_squares
 from scipy.special import logsumexp
 
 REQUIRED_COLUMNS = ["repo", "user_id", "year", "office", "organization_role"]
+
 ROLE_MAP = {
-    "FACULTY": "Faculty",
-    "GRADUATE": "Graduate",
-    "UNDRGRAD": "Undergraduate",
-    "PROSTAFF": "Professional staff",
-    "SCIENTST": "Scientist",
-    "POSTDOC": "Postdoc",
-    "RETIRED": "Retired",
-    "SELFEMPL": "Self-employed",
-    "OTHER": "Other",
-    "NONE": "Unknown",
+    "ROLE_A": "Role A",
+    "ROLE_B": "Role B",
+    "ROLE_C": "Role C",
+    "ROLE_D": "Role D",
+    "ROLE_E": "Role E",
+    "ROLE_F": "Role F",
+    "ROLE_G": "Role G",
+    "ROLE_H": "Role H",
+    "ROLE_I": "Role I",
+    "ROLE_J": "Role J",
 }
 ROLE_ORDER = [
-    "Graduate", "Postdoc", "Undergraduate", "Scientist", "Faculty",
-    "Other", "Professional staff", "Retired", "Self-employed", "Unknown",
+    "Role A", "Role B", "Role C", "Role D", "Role E",
+    "Role F", "Role G", "Role H", "Role I", "Role J",
 ]
 OFFICE_ORDER = [
-    "Basic Energy Sciences",
-    "High Energy Physics",
-    "NERSC Directors Reserve",
-    "Biological and Environmental Research",
-    "Advanced Scientific Computing Research",
-    "Fusion Energy Sciences",
-    "Nuclear Physics",
-    "ASCR Leadership Computing Challenge",
+    "Office 1",
+    "Office 2",
+    "Office 3",
+    "Office 4",
+    "Office 5",
+    "Office 6",
+    "Office 7",
+    "Office 8",
 ]
 OFFICE_LABELS = {
-    "Basic Energy Sciences": "BES",
-    "High Energy Physics": "HEP",
-    "NERSC Directors Reserve": "NERSC DDR",
-    "NERSC Director's Reserve": "NERSC DDR",
-    "Biological and Environmental Research": "BER",
-    "Advanced Scientific Computing Research": "ASCR",
-    "Fusion Energy Sciences": "FES",
-    "Nuclear Physics": "NP",
-    "ASCR Leadership Computing Challenge": "ASCR LCC",
+    "Office 1": "OFI_1",
+    "Office 2": "OFI_2",
+    "Office 3": "OFI_3",
+    "Office 4": "OFI_4",
+    "Office 5": "OFI_5",
+    "Office 6": "OFI_6",
+    "Office 7": "OFI_7",
+    "Office 8": "OFI_8",
     "Other (<1%)": "Other (<1%)",
     "Unknown": "Unknown",
 }
-
 
 def load_memberships(path):
     data = pd.read_csv(path, dtype={"repo": "string", "user_id": "string"})
